@@ -25,8 +25,8 @@ RUN wget https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}
     && mkdir -p ~/.config/godot \
     && mkdir -p ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable.mono \
     && unzip Godot_v${GODOT_VERSION}-stable_mono_linux_x86_64.zip \
-    && ln Godot_v${GODOT_VERSION}-stable_mono_linux_x86_64/Godot_v${GODOT_VERSION}-stable_mono_linux.x86_64 /usr/bin/godot \
-    && ln Godot_v${GODOT_VERSION}-stable_mono_linux_x86_64/GodotSharp /usr/bin/GodotSharp \
+    && cp Godot_v${GODOT_VERSION}-stable_mono_linux_x86_64/Godot_v${GODOT_VERSION}-stable_mono_linux.x86_64 /usr/bin/godot \
+    && cp -r Godot_v${GODOT_VERSION}-stable_mono_linux_x86_64/GodotSharp /usr/bin/GodotSharp \
     && unzip Godot_v${GODOT_VERSION}-stable_mono_export_templates.tpz \
     && cp -r templates/* ~/.local/share/godot/export_templates/${GODOT_VERSION}.stable.mono/ \
     && rm -rf Godot_v${GODOT_VERSION}-stable_mono_linux_x86_64.zip  Godot_v${GODOT_VERSION}-stable_mono_export_templates.tpz templates
