@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 
 USER root
 
-ARG GODOT_VERSION="4.1.2"
+ARG GODOT_VERSION="4.2"
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
